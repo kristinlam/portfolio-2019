@@ -1,0 +1,321 @@
+/*-------------------------------------------
+Global Styles
+-------------------------------------------*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::selection {
+    background-color: #ffffd2;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Molengo', sans-serif;
+	color: #252a34;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Molengo', sans-serif;
+	font-weight: 300;
+}
+
+
+/*-------------------------------------------
+Buttons
+-------------------------------------------*/
+.btn {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	border-radius: 6rem;
+	padding: 2rem 3rem;
+	display: inline-block;
+}
+
+/*-------------------------------------------
+Text Styles
+-------------------------------------------*/
+.heading--primary {
+	font-size: 4.5rem;
+	font-weight: 700;
+	letter-spacing: 2.5px;
+	line-height: 1.4;
+}
+
+.heading--secondary {
+	font-size: 3rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.heading--tertiary {
+	font-family: 'Molengo', sans-serif;
+	font-size: 1.8rem;
+}
+
+.paragraph {
+	font-size: 1.6rem;
+	line-height: 1.8;
+}
+
+.paragraph:not(:last-child){
+	margin-bottom: 2rem;
+}
+
+.link:link,
+.link:visited {
+	text-decoration: none;
+	color: #252a34;;
+}
+
+/*-------------------------------------------
+Grid Container
+-------------------------------------------*/
+
+.grid__container {
+	background-color: white;
+	display: grid;
+	grid-template-rows: min-content;
+	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+/*-------------------------------------------
+Main Navigation Bar
+-------------------------------------------*/
+
+.main-nav {
+	grid-column: center-start / center-end;
+
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5rem;
+}
+
+.main-nav__list {
+
+}
+
+.main-nav__logo {
+	max-height: 5rem;
+}
+
+.main-nav__list-item {
+	display: inline-block;
+	margin: 1rem 3rem;
+}
+
+.main-nav__list-item:last-child {
+	margin-right: 0;
+}
+
+.main-nav__link:link,
+.main-nav__link:visited,
+.main-nav__logo {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-decoration: none;
+	color: #252a34;
+	transition: color .2s;
+}
+
+.main-nav__link:hover {
+	color: #ffc6be;
+}
+
+/*-------------------------------------------
+Header
+-------------------------------------------*/
+
+.header {
+	grid-column: col-start 3 / col-end 6;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12rem 0;
+}
+
+.header__text {
+	color: #ffc6be;
+	text-align: center;
+}
+
+/*-------------------------------------------
+Portfolio Navigation
+-------------------------------------------*/
+.portfolio__nav {
+	grid-column: center-start / center-end;
+}
+
+.portfolio__nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.portfolio__nav li {
+	background-color: #ffc6be;
+	border-radius: 3rem;
+	display: inline-block;
+	padding: 1.2rem 2.5rem;
+	margin: 0 1rem;
+	font-size: 1.4rem;
+	color: #fff;
+	cursor: pointer;
+  	text-transform: uppercase;
+  	letter-spacing: 3px;
+}
+
+.portfolio__nav li.active {
+	color: #fff;
+	background-color: rgba(0,0,0,.1);
+}
+
+/*-------------------------------------------
+Portfolio Content
+-------------------------------------------*/
+.portfolio__content {
+	grid-column: center-start / center-end ;
+	margin: 5rem 0;
+}
+
+.grid-item {
+	width: 31%;
+	margin: 1%;
+}
+
+.grid__text {
+	color: #fff;
+	text-align: center;
+}
+
+.grid__text--title {
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	opacity: 1;
+	transition: all 0.35s;
+}
+
+.grid-item:hover .grid__text--title {
+	transform: translate(-50%, -100px);
+	opacity: 0;
+}
+
+.grid__text--detail {
+	letter-spacing: 2px;
+	width: 80%;
+	font-size: 1.2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	transform: translate(-50%, 100%);
+	transition: all 0.35s;
+
+}
+
+.grid-item:hover {
+	cursor: pointer;
+}
+
+.grid-item:hover .grid__text--detail {
+	opacity: 1;
+	transform: translate(-50%, -50%);
+}
+
+.grid-item img {
+	width: 100%;
+    filter: brightness(.8);
+	transition: filter .4s;
+}
+
+.grid-item:hover img {
+    filter: brightness(.3);
+}
+
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+.about {
+	grid-column: center-start / center-end;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 15rem 0;
+}
+
+.about__heading {
+	align-self: flex-start;
+}
+
+.about__text {
+	margin-left: 15rem;
+	width: 50%;
+}
+
+.about__link:link,
+.about__link:visited {
+	color: white;
+	padding: 2px;
+	border-radius: 3px;
+	background-color: #ffc6be;
+}
+
+.about__link:hover {
+
+}
+
+/*-------------------------------------------
+Footer Copyright
+-------------------------------------------*/
+
+.footer {
+	grid-column: full-start / full-end;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 4rem 0;
+}
+
+.footer__copyright {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+/*-------------------------------------------
+Utility Classes
+-------------------------------------------*/
+.u-mb-xlg { margin-bottom: 8rem !important; }
+.u-mb-lg { margin-bottom: 5rem !important; }
+.u-mb-md { margin-bottom: 3rem !important; }
+.u-mb-sm { margin-bottom: 1rem !important; }
+
+.u-mt-sm { margin-top: 1rem !important; }
+.u-mt-md { margin-top: 3rem !important; }
+.u-mt-lg { margin-top: 5rem !important; }
+.u-mt-xlg { margin-top: 8rem !important; }
+
