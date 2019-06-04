@@ -2,7 +2,7 @@ $( document ).ready(function() {
 	var $grid = $('.grid').isotope({
 		// options...
 		itemSelector: '.grid-item',
-		// sortBy: 'random'
+		sortBy: 'random'
 	});
 
 	// layout Isotope after each image loads
