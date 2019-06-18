@@ -21,12 +21,12 @@ html {
 
 body {
 	box-sizing: border-box;
-	font-family: 'Molengo', sans-serif;
+	font-family: 'Muli', sans-serif;
 	color: #252a34;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Molengo', sans-serif;
+	font-family: 'Muli', sans-serif;
 	font-weight: 300;
 }
 
@@ -60,7 +60,7 @@ Text Styles
 }
 
 .heading--tertiary {
-	font-family: 'Molengo', sans-serif;
+	font-family: 'Muli', sans-serif;
 	font-size: 1.8rem;
 }
 
