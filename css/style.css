@@ -64,15 +64,6 @@ Text Styles
 	font-size: 1.8rem;
 }
 
-.paragraph {
-	font-size: 1.6rem;
-	line-height: 1.8;
-}
-
-.paragraph:not(:last-child){
-	margin-bottom: 2rem;
-}
-
 .link:link,
 .link:visited {
 	text-decoration: none;
@@ -147,6 +138,12 @@ Header
 	padding: 12rem 0;
 }
 
+@media only screen and (max-width: 900px) {
+	.header {
+		grid-column: center-start / center-end;
+	}
+}
+
 .header__text {
 	color: #ffc6be;
 	text-align: center;
@@ -192,50 +189,52 @@ Portfolio Content
 }
 
 .grid-item {
-	width: 31%;
+	width: 48%;
 	margin: 1%;
+}
+
+@media only screen and (max-width: 1200px) {
+	.grid-item {
+		width: 48%;
+		margin: 1%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.grid-item {
+		width: 80%;
+		margin: 1% 10%;
+	}
 }
 
 .grid__text {
 	color: #fff;
 	text-align: center;
-}
-
-.grid__text--title {
-	width: 100%;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	opacity: 1;
-	transition: all 0.35s;
-}
-
-.grid-item:hover .grid__text--title {
-	transform: translate(-50%, -100px);
-	opacity: 0;
-}
-
-.grid__text--detail {
-	letter-spacing: 2px;
 	width: 80%;
-	font-size: 1.2rem;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	opacity: 0;
 	transform: translate(-50%, 100%);
 	transition: all 0.35s;
+}
 
+.grid__text--title {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom: 2.5rem;
+}
+
+.grid__text--detail {
+	letter-spacing: 2px;
+	font-size: 1.2rem;
 }
 
 .grid-item:hover {
 	cursor: pointer;
 }
 
-.grid-item:hover .grid__text--detail {
+.grid-item:hover .grid__text {
 	opacity: 1;
 	transform: translate(-50%, -50%);
 }
@@ -272,6 +271,41 @@ About
 	margin-left: 15rem;
 	width: 50%;
 }
+
+
+.about__text p {
+	font-size: 1.6rem;
+	line-height: 1.8;
+}
+
+.about__text p:not(:last-child){
+	margin-bottom: 2rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	.about__text {
+		margin-left: 8rem;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.about {
+		padding: 10rem 0;
+		flex-direction: column;
+	}
+
+	.about__heading {
+		align-self: center;
+	}
+
+	.about__text {
+		width: 100%;
+		text-align: center;
+		margin-left: 0;
+	}
+}
+
 
 .about__link:link,
 .about__link:visited {
