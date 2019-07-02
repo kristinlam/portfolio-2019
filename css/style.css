@@ -321,6 +321,20 @@ About
 }
 
 /*-------------------------------------------
+Social Media Icons
+-------------------------------------------*/
+.social_icon {
+	width: 2.6rem;
+	height: 100%;
+	margin-right: .5rem;
+	transition: all .5s;
+}
+
+.social_icon:hover {
+	filter: brightness(0.3);
+}
+
+/*-------------------------------------------
 Footer Copyright
 -------------------------------------------*/
 
