@@ -228,6 +228,7 @@ Portfolio Content
 .grid__text--detail {
 	letter-spacing: 2px;
 	font-size: 1.2rem;
+	line-height: 1.6;
 }
 
 .grid-item:hover {
@@ -241,12 +242,12 @@ Portfolio Content
 
 .grid-item img {
 	width: 100%;
-    filter: brightness(.8);
+    filter: brightness(1);
 	transition: filter .4s;
 }
 
 .grid-item:hover img {
-    filter: brightness(.3);
+    filter: brightness(.2);
 }
 
 
