@@ -1,3 +1,3 @@
 # portfolio-2019
 
-Under construction
+Viewable at https://kristinlam.co/
