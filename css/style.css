@@ -202,6 +202,7 @@ Portfolio Content
 .grid-item {
 	width: 48%;
 	margin: 1%;
+	overflow: hidden;
 }
 
 @media only screen and (max-width: 1200px) {
